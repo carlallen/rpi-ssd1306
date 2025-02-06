@@ -6,3 +6,4 @@ Pillow==8.4.0
 RPi.GPIO==0.7.0
 smbus2==0.4.1
 spidev==3.5
+adafruit-circuitpython-typing
