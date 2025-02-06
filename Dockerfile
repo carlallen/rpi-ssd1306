@@ -12,7 +12,7 @@ automake \
 libtool \
 libfreetype6-dev \
 libjpeg-dev \
-libsdl-dev \
+libsdl1.2-dev \
 libportmidi-dev \
 libsdl-ttf2.0-dev \
 libsdl-mixer1.2-dev \
@@ -21,6 +21,6 @@ python3-rpi.gpio \
 python3-pip
 WORKDIR /usr/src/app
 COPY ./requirements.txt ./
-RUN pip3 install -r requirements.txt
+RUN CFLAGS="-fcommon" pip3 install -r requirements.txt
 COPY . ./
 CMD python3 main.py

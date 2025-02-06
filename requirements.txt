@@ -3,8 +3,8 @@ adafruit-circuitpython-ssd1306==2.12.2
 adafruit-circuitpython-typing==1.11.2
 font-roboto==0.0.1
 fonts==0.0.3
-Pillow==8.4.0
-RPi.GPIO==0.7.0
+Pillow==11.1.0
+RPi.GPIO==0.7.1
 smbus2==0.4.1
 spidev==3.5
 
