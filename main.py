@@ -45,7 +45,7 @@ def clear():
 
 display = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, RESET)
 
-emoji = "¯\_(ツ)_/¯"
+emoji = "¯\\_(ツ)_/¯"
 platform = "@github"
 author = "promethee"
 

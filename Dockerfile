@@ -18,7 +18,8 @@ libsdl-ttf2.0-dev \
 libsdl-mixer1.2-dev \
 libsdl-image1.2-dev \
 python3-rpi.gpio \
-python3-pip
+python3-pip \
+python3-pkg-resources
 WORKDIR /usr/src/app
 COPY ./requirements.txt ./
 RUN CFLAGS="-fcommon" pip3 install -r requirements.txt
