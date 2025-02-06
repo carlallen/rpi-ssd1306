@@ -43,7 +43,7 @@ def clear():
   display.fill(0)
   display.image(im)
 
-display = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, RESET)
+display = adafruit_ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c, reset=RESET)
 
 emoji = "¯\\_(ツ)_/¯"
 platform = "@github"
@@ -54,9 +54,9 @@ draw = ImageDraw.Draw(im)
 
 def show(text, font):
   clear()
-  size = font.getsize(text)
+  length = font.getlength(text)
   draw.rectangle([0, 0, WIDTH, HEIGHT], fill=0)
-  draw.text((OFFSET_X + ((WIDTH/2)-(size[0]/2)), OFFSET_Y), text, align='center', font=font, fill=1)
+  draw.text((OFFSET_X + ((WIDTH/2)-(length/2)), OFFSET_Y), text, align='center', font=font, fill=1)
   rotated_image = im.transpose(Image.ROTATE_180) if ROTATE else im
   display.image(rotated_image)
   display.show()
