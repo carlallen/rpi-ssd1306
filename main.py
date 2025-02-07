@@ -51,6 +51,7 @@ while True:
   cmd = "hostname"
   host = subprocess.check_output(cmd, shell = True )
   show(host)
+  time.sleep(15)
   cmd = "hostname -I |cut -f 1 -d ' '"
   ip = subprocess.check_output(cmd, shell = True )
   show(ip)
